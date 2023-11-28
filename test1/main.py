@@ -35,3 +35,5 @@ if __name__ == "__main__":
         output_lag=20,
         schedule='KA_3_500.xlsx'
     )
+
+    print(KA1.schedule)
