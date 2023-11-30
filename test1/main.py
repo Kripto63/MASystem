@@ -1,5 +1,6 @@
 import logging
 from agent.Device import Device
+from agent.global_queue import global_queue
 
 if __name__ == "__main__":
     KA1 = Device(
@@ -36,4 +37,8 @@ if __name__ == "__main__":
         schedule='KA_3_500.xlsx'
     )
 
-    print(KA1.schedule)
+    queue = global_queue()
+    queue.add_item(KA1.schedule)
+    queue.add_item(KA2.schedule)
+    for i in queue.global_queue:
+        print(i)
