@@ -40,5 +40,8 @@ if __name__ == "__main__":
     queue = global_queue()
     queue.add_item(KA1.schedule)
     queue.add_item(KA2.schedule)
-    for i in queue.global_queue:
-        print(i)
+    # queue.global_iter = iter(queue.global_queue)
+    # for _ in range(10):
+    #     next(queue.global_iter)
+    # print(list(queue.global_iter))
+
